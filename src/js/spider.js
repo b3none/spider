@@ -17,7 +17,7 @@
     var current = translations[currentLanguage];
     var strings = translations[lang];
 
-    if (!strings || strings.length != current.length) {
+    if (!strings || strings.length !== current.length) {
       console.log('Language ' + lang + ' not found or invalid.');
       return;
     }
@@ -364,9 +364,6 @@
 
       compileButton.disabled = false;
     };
-
-    xhr.open('GET', 'https://users.alliedmods.net/~asherkin/attachment.php?id=' + location.hash.slice(1), true);
-    xhr.send();
   }
 
   var savedText = localStorage['input-file'];
@@ -569,6 +566,7 @@
 
       event.stopPropagation();
       event.preventDefault();
+      location.reload();
     }
   });
 
