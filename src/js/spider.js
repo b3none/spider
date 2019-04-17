@@ -455,7 +455,7 @@
       li.appendChild(controls);
       li.appendChild(display);
 
-      includes.insertBefore(li, includeDrop);
+      includes.appendChild(li);
     }
 
     showRestoreNotice = true;
